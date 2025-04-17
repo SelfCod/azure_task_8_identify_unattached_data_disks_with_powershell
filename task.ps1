@@ -15,7 +15,7 @@ try {
 
     # Filter for unattached disks based on DiskState or ManagedBy properties
     $unattachedDisks = $allDisks | Where-Object {
-        $_.DiskState -eq 'Unattached' -or -not $_.ManagedBy
+        $_.DiskState -eq 'Unattached'
     }
 
     # Iterate through the unattached disks and collect relevant information
